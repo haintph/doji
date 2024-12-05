@@ -72,7 +72,7 @@ class Order extends BaseModel
     {
         $sql = "SELECT o.*, username, email, address, phone
         FROM orders o JOIN users u ON o.user_id=u.id
-        WHERE u.id=:user_id";
+        WHERE u.id=:user_id ORDER BY id DESC ";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute(['user_id' => $user_id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

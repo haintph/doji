@@ -74,7 +74,7 @@ include_once ROOT_DIR . "views/client/header.php"
                 </div>
                 <div
                     class="new-arrivals-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
-                    <?php foreach ($products as $pro): ?>
+                    <?php foreach ($newProducts as $pro): ?>
                         <div class="slick-single-layout">
                             <div class="axil-product product-style-four">
                                 <div class="thumbnail">
@@ -83,7 +83,7 @@ include_once ROOT_DIR . "views/client/header.php"
                                             src="<?= ROOT_URL . 'images/' . $pro['img_product'] ?>" alt="Product Images">
                                     </a>
                                     <div class="label-block label-right">
-                                        <div class="product-badget">20% OFF</div>
+                                        <div class="product-badget">New</div>
                                     </div>
                                     <div class="product-hover-action">
                                         <ul class="cart-action">
@@ -164,9 +164,9 @@ include_once ROOT_DIR . "views/client/header.php"
                                         <img data-sal="fade" data-sal-delay="100" data-sal-duration="1500"
                                             src="<?= ROOT_URL . 'images/' . $pro['img_product'] ?>" alt="Product Images">
                                     </a>
-                                    <div class="label-block label-right">
+                                    <!-- <div class="label-block label-right">
                                         <div class="product-badget">20% OFF</div>
-                                    </div>
+                                    </div> -->
                                     <div class="product-hover-action">
                                         <ul class="cart-action">
                                             <li class="wishlist"><a href="wishlist.html"><i

@@ -21,14 +21,18 @@ class Product extends BaseModel
     
     public function all()
     {
-        $sql = "SELECT p.*, c.category_name FROM products p JOIN categories c ON p.category_id=c.id ORDER BY id DESC";
-
+        $sql = "SELECT p.*, c.category_name FROM products p JOIN categories c ON p.category_id=c.id";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
-
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
+    //san pham moi nhat
+    public function newProduct(){
+        $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 4";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     public function countAll()
     {
         $sql = "SELECT COUNT(*) AS total FROM products";

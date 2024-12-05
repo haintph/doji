@@ -43,28 +43,36 @@
                                 <?php endforeach ?>
                             </tbody>
                             <tfoot class="cart-table-footer">
-                    <tr>
-                        <td colspan="5" class="text-end cart-total-label">Tổng tiền:</td>
-                        <td colspan="2" class="cart-total-value fw-bold text-danger"><?= number_format($sumPrice) ?> VNĐ</td>
-                    </tr>
-                </tfoot>
+                                <tr>
+                                    <td colspan="5" class="text-end cart-total-label">Tổng tiền:</td>
+                                    <td colspan="2" class="cart-total-value fw-bold text-danger"><?= number_format($sumPrice) ?> VNĐ</td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                     <div class="cart-update-btn-area">
-                        <!-- <div class="input-group product-cupon">
-                            <input placeholder="Enter coupon code" type="text">
-                            <div class="product-cupon-btn">
-                                <button type="submit" class="axil-btn btn-outline">Apply</button>
-                            </div>
-                        </div> -->
-
                         <div class="update-btn">
                             <button type="submit" class="axil-btn btn-outline">Cập nhật sản phẩm</button>
                         </div>
+                        <?php
+                        // Kiểm tra nếu giỏ hàng có ít nhất 1 sản phẩm
+                        $totalItems = 0;
+
+                        if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+                            foreach ($_SESSION['cart'] as $item) {
+                                $totalItems += $item['quantity']; // Cộng dồn số lượng sản phẩm
+                            }
+                        }
+                        ?>
+
                         <div class="update-btn">
-                            <a href="<?= ROOT_URL . '?ctl=view-checkout' ?>" class="axil-btn btn-outline text-center">Thanh toán</a>
+                            <?php if ($totalItems > 0): ?>
+                                <a href="<?= ROOT_URL . '?ctl=view-checkout' ?>" class="axil-btn btn-outline text-center">Thanh toán</a>
+                            <?php else: ?>
+                                <span class="axil-btn btn-outline text-center" style="cursor: not-allowed; color: gray;" >Thanh toán</span>
+                            <?php endif; ?>
                         </div>
-                       
+
                     </div>
                 </form>
                 <div class="row">

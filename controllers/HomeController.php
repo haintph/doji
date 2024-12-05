@@ -6,7 +6,8 @@ class HomeController
     {
         $title= "Trang chủ";
         $products = (new Product)->all();
+        $newProducts = (new Product)->newProduct();
         $categories = (new Category)->list() ;
-        return view("client.home",compact('categories','title','products'));
+        return view("client.home",compact('categories','title','products','newProducts'));
     }
 }

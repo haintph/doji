@@ -91,9 +91,9 @@ include_once ROOT_DIR . "views/client/header.php"
                                 <a href="<?= ROOT_URL . '?ctl=details&id=' . $pro['id'] ?>">
                                     <img src="<?= ROOT_URL . 'images/' . $pro['img_product'] ?>" alt="Product Images">
                                 </a>
-                                <div class="label-block label-right">
-                                    <div class="product-badget">20% OFF</div>
-                                </div>
+                                <!-- <div class="label-block label-right">
+                                    <div class="product-badget"></div>
+                                </div> -->
                                 <div class="product-hover-action">
                                     <ul class="cart-action">
                                         <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>

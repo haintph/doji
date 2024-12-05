@@ -147,7 +147,11 @@
                                         <?php endforeach ?>
                                     </ul>
                                 </li>
-
+                                <li><a href="<?= ROOT_URL . '?ctl=about' ?>">Giới thiệu</a></li>
+                                <li>
+                                    <a href="<?= ROOT_URL . '?ctl=blog' ?>">Tin tức</a>
+                                </li>
+                                <li><a href="<?= ROOT_URL . '?ctl=contact' ?>">Liên hệ</a></li>
                             </ul>
                         </nav>
                         <!-- End Mainmanu Nav -->
