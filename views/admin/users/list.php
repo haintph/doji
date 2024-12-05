@@ -24,7 +24,7 @@ include_once ROOT_DIR . "views/admin/header.php"
 
         <div class="card-header">
 
-          <form>
+          <!-- <form>
             <div class="input-group">
               <input type="search" name="search" id="search"
                 placeholder="Search everything" class="form-control">
@@ -35,7 +35,7 @@ include_once ROOT_DIR . "views/admin/header.php"
                 </button>
               </span>
             </div>
-          </form>
+          </form> -->
 
           <div class="btn-actions-pane-right">
             <div role="group" class="btn-group-sm btn-group">

@@ -32,18 +32,7 @@ include_once ROOT_DIR . "views/admin/header.php"
         <div class="col-md-12">
             <div class="main-card mb-3 card">
                 <div class="card-header">
-                    <form>
-                        <div class="input-group">
-                            <input type="search" name="search" id="search"
-                                placeholder="Search everything" class="form-control">
-                            <span class="input-group-append">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-search"></i>&nbsp;
-                                    Search
-                                </button>
-                            </span>
-                        </div>
-                    </form>
+                  
                     <div class="btn-actions-pane-right">
                         <div role="group" class="btn-group-sm btn-group">
                             <button class="btn btn-focus">This week</button>

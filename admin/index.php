@@ -20,7 +20,7 @@ require_once __DIR__ . "/../controllers/admin/OrderController.php";
 require_once __DIR__ . "/../controllers/admin/AdminCommentController.php";
 
 $ctl = $_GET['ctl'] ?? "";
-// checkAdmin();
+checkAdmin();
 match ($ctl) {
     "" => (new DashboardController)->index(),
 

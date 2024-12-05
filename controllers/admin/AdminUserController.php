@@ -2,13 +2,6 @@
 require_once __DIR__ . '/../../models/Auth.php';
 class AdminUserController
 {
-    public function __construct()
-    {
-        $user = $_SESSION['user'] ?? [];
-        if (!$user || $user['role'] != 'admin') {
-            return header("Location:" . ROOT_URL);
-        }
-    }
     public function index()
     {
         $users = (new AuthModel)->all();

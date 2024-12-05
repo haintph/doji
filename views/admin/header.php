@@ -147,8 +147,7 @@
                                                                 </div>
                                                                 <div class="widget-content-left">
                                                                     <div class="widget-heading"></div>
-                                                                    <div class="widget-subheading opacity-8">A short
-                                                                        profile description</div>
+                                                                    <div class="widget-subheading opacity-8">Email: <?=$_SESSION['user']['email'] ?></div>
                                                                 </div>
                                                                 <div class="widget-content-right mr-2">
                                                                     <a href="<?= ROOT_URL . '?ctl=logout' ?>"

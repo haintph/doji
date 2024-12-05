@@ -1,5 +1,5 @@
 <?php
-include_once ROOT_DIR . "views/admin/header.php" 
+include_once ROOT_DIR . "views/admin/header.php"
 ?>
 
 <div class="app-main__inner">
@@ -34,21 +34,6 @@ include_once ROOT_DIR . "views/admin/header.php"
             <div class="main-card mb-3 card">
 
                 <div class="card-header">
-
-                    <form>
-                        <div class="input-group">
-                            <input type="search" name="search" id="search"
-                                placeholder="Search everything" class="form-control">
-                            <span class="input-group-append">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-search"></i>&nbsp;
-                                    Search
-                                </button>
-                            </span>
-
-                        </div>
-                    </form>
-
                     <div class="btn-actions-pane-right">
                         <div role="group" class="btn-group-sm btn-group">
                             <button class="btn btn-focus">This week</button>
@@ -74,7 +59,7 @@ include_once ROOT_DIR . "views/admin/header.php"
                                 <th>TRANG THÁI </th>
                                 <th>TỔNG TIỀN</th>
                                 <th>NGÀY MUA</th>
-                                
+
                                 <th class="text-center">ACTION</th>
                             </tr>
                         </thead>
@@ -87,12 +72,12 @@ include_once ROOT_DIR . "views/admin/header.php"
                                     <td class="text-muted"><?= $order['username'] ?></td>
                                     <td class="text-muted"><?= $order['phone'] ?></td>
                                     <td class="text-muted"><?= $order['payment_method'] ?></td>
-                                    <td class="text-muted"><?= getStatusOrder( $order['status'] ) ?></td>
+                                    <td class="text-muted"><?= getStatusOrder($order['status']) ?></td>
                                     <td class="text-muted"><?= number_format($order['total_price'])  ?>VND</td>
                                     <td class="text-muted"><?= $order['created_at'] ?></td>
-                                   
+
                                     <td class="text-center">
-                                       <a href="<?= ADMIN_URL . '?ctl=detail-order&id=' .$order['id'] ?>" class="btn btn-warning text-white">Cập nhật</a>
+                                        <a href="<?= ADMIN_URL . '?ctl=detail-order&id=' . $order['id'] ?>" class="btn btn-warning text-white">Cập nhật</a>
                                     </td>
                                 </tr>
                             <?php endforeach ?>
@@ -176,4 +161,3 @@ include_once ROOT_DIR . "views/admin/header.php"
 <?php
 include_once ROOT_DIR . "views/admin/footer.php"
 ?>
-
