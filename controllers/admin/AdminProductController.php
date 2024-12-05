@@ -18,7 +18,7 @@ class AdminProductController
     public function index()
     {
         $message = $_SESSION['message']  ?? '';
-        $products = (new Product)->all();
+        $products = (new Product)->allAdmin();
         return view('admin.products.list', compact('products', 'message'));
     }
 

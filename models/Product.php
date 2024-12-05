@@ -26,6 +26,13 @@ class Product extends BaseModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function allAdmin()
+    {
+        $sql = "SELECT p.*, c.category_name FROM products p JOIN categories c ON p.category_id=c.id ORDER BY id DESC";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     //san pham moi nhat
     public function newProduct(){
         $sql = "SELECT * FROM products ORDER BY id DESC LIMIT 4";

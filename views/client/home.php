@@ -79,7 +79,7 @@ include_once ROOT_DIR . "views/client/header.php"
                             <div class="axil-product product-style-four">
                                 <div class="thumbnail">
                                     <a href="<?= ROOT_URL . '?ctl=details&id=' . $pro['id'] ?>">
-                                        <img data-sal="fade" data-sal-delay="100" data-sal-duration="1500"
+                                        <img data-sal-delay="100" data-sal-duration="1500"
                                             src="<?= ROOT_URL . 'images/' . $pro['img_product'] ?>" alt="Product Images">
                                     </a>
                                     <div class="label-block label-right">
@@ -130,7 +130,7 @@ include_once ROOT_DIR . "views/client/header.php"
             <div class="categrie-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
                 <?php foreach ($categories as $cate): ?>
                     <div class="slick-single-layout">
-                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="200" data-sal-duration="500">
+                        <div class="categrie-product" data-sal-delay="200" data-sal-duration="500">
                             <a href="<?= ROOT_URL . '?ctl=category&id=' . $cate['id'] ?>">
                                 <img class="img-fluid" src="<?= ROOT_URL . 'images/' . $cate['img_category'] ?>"
                                     alt="product categorie">
@@ -151,18 +151,17 @@ include_once ROOT_DIR . "views/client/header.php"
         <div class="container">
             <div class="product-area pb--80">
                 <div class="section-title-wrapper">
-                    <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> Our
-                        Products</span>
-                    <h2 class="title">Explore our Products</h2>
+                    <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> Sản phẩm</span>
+                    <h2 class="title">Tất cả sản phẩm</h2>
                 </div>
                 <div class="row row--15">
                     <?php foreach ($products as $pro): ?>
                         <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
                             <div class="axil-product product-style-one">
                                 <div class="thumbnail">
-                                    <a href="<?= ROOT_URL . '?ctl=details&id' . $pro['id'] ?>">
-                                        <img data-sal="fade" data-sal-delay="100" data-sal-duration="1500"
-                                            src="<?= ROOT_URL . 'images/' . $pro['img_product'] ?>" alt="Product Images">
+                                    <a href="<?= ROOT_URL . '?ctl=details&id=' . $pro['id'] ?>">
+                                        <img data-sal-delay="100" data-sal-duration="1500"
+                                            src="<?php echo ROOT_URL . 'images/' . $pro['img_product'] ?>" alt="Product Images">
                                     </a>
                                     <!-- <div class="label-block label-right">
                                         <div class="product-badget">20% OFF</div>
@@ -232,7 +231,7 @@ include_once ROOT_DIR . "views/client/header.php"
             <div class="col">
                 <div class="service-box service-style-2">
                     <div class="icon">
-                        <img src="<?= ROOT_URL .'views/client/assets/images/icons/service1.png' ?>" alt="Service">
+                        <img src="<? ROOT_URL .'views/client/assets/images/icons/service1.png' ?>" alt="Service">
                     </div>
                     <div class="content">
                         <h6 class="title">Fast &amp; Secure Delivery</h6>

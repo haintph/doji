@@ -21,7 +21,6 @@
                                     <th scope="col" class="product-title">Sản phẩm</th>
                                     <th scope="col" class="product-price">Giá </th>
                                     <th scope="col" class="product-quantity">Số lượng</th>
-
                                     <th scope="col" class="product-subtotal">Tổng tiền</th>
                                 </tr>
                             </thead>

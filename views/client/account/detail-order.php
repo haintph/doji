@@ -107,6 +107,7 @@ include_once ROOT_DIR . "views/client/header.php"
                     <tr>
                         <th>#</th>
                         <th>Tên sản phẩm</th>
+                        <th>Ảnh sản phẩm</th>
                         <th>Số lượng</th>
                         <th>Đơn giá</th>
                         <th>Tổng</th>

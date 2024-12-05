@@ -1,6 +1,7 @@
 <?php
 class AboutController{
     public function index(){
-        return view('client.about.about');
+        $categories = (new Category)->list();
+        return view('client.about.about',compact('categories'));
     }
 }

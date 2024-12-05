@@ -1,6 +1,7 @@
 <?php
 class BlogController{
     public function index(){
-        return view('client.blog.blog');
+        $categories = (new Category)->list();
+        return view('client.blog.blog',compact('categories'));
     }
 }
